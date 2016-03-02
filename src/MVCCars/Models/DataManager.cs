@@ -13,8 +13,10 @@ namespace MVCCars.Models
         static DataManager()
         {
             cars.Add(new Car("Ferarri", 3, 299));
-            cars.Add(new Car("Volvo V70", 5, 170));
+            cars.Add(new Car("Volvo V70", 5, 287));
             cars.Add(new Car("Puma", 3, 247));
+            cars.Add(new Car("BMW", 5, 297));
+            cars.Add(new Car("Wolkswagen", 3, 115));
         }
 
         public void AddCar(CreateCarViewModel viewModel)
