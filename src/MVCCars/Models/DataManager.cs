@@ -21,7 +21,7 @@ namespace MVCCars.Models
 
         public void AddCar(CreateCarViewModel viewModel)
         {
-
+            cars.Add(new Car(viewModel.Brand, viewModel.Doors, viewModel.TopSpeed));
         }
 
         public List<ListCarViewModel> ListCars()
