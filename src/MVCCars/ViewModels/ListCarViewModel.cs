@@ -10,7 +10,6 @@ namespace MVCCars.ViewModels
     {
         [Display(Name = "Car Brand")]
         public string Brand { get; set; }
-
         public bool ShowAsFast { get; set; }
     }
 }
