@@ -12,10 +12,12 @@ namespace MVCCars.ViewModels
         [Required(ErrorMessage = "Must have a make!")]
         public string Brand { get; set; }
 
+        [Display(Name = "Doors")]
         [Range(3, 5, ErrorMessage = "Must have 3-5 doors")]
         public int Doors { get; set; }
 
         //[Required(ErrorMessage = "")]
+        [Display(Name = "Top speed")]
         [Range(0, 300, ErrorMessage = "Speed must be within 0 and 300!")]
         public int TopSpeed { get; set; }
 
