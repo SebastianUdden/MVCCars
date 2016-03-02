@@ -10,6 +10,13 @@ namespace MVCCars.Models
     {
         static List<Car> cars = new List<Car>();
 
+        static DataManager()
+        {
+            cars.Add(new Car("Ferarri", 3, 299));
+            cars.Add(new Car("Volvo V70", 5, 170));
+            cars.Add(new Car("Puma", 3, 247));
+        }
+
         public void AddCar(CreateCarViewModel viewModel)
         {
 
@@ -17,13 +24,16 @@ namespace MVCCars.Models
 
         public List<ListCarViewModel> ListCars()
         {
-            List<ListCarViewModel> carViews = new List<ListCarViewModel>();
+            List<Car> carViews = new List<Car>();
 
-            //foreach (var car in cars)
-            //{
-            //    carViews.Add(new ListCarViewModel);
-            //}
-            return carViews;
+            return carViews
+                .OrderBy(o => o.Brand)
+                .Select(o => new ListCarViewModel
+                {
+                    Brand = o.Brand,
+                    ShowAsFast = o.TopSpeed >= 250
+                })
+                .ToList();
         }
     }
 }
