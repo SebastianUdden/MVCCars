@@ -24,9 +24,7 @@ namespace MVCCars.Models
 
         public List<ListCarViewModel> ListCars()
         {
-            List<Car> carViews = new List<Car>();
-
-            return carViews
+            return cars
                 .OrderBy(o => o.Brand)
                 .Select(o => new ListCarViewModel
                 {
