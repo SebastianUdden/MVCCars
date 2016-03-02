@@ -1,0 +1,14 @@
+﻿@if (Model.ShowAsHighlighted)
+{
+    <tr style="background-color:red;">
+        <td>@Model.Name</td>
+        <td>@Model.Email</td>
+    </tr>
+}
+else
+{
+    <tr>
+        <td>@Model.Name</td>
+        <td>@Model.Email</td>
+    </tr>
+}
