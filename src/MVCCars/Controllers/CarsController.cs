@@ -16,9 +16,23 @@ namespace MVCCars.Controllers
             var model = dataManager.ListCars();
             return View(model);
         }
-        public IActionResult Create()
+        public IActionResult Create(CreateCarViewModel viewModel)
         {
-            return View();
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            try
+            {
+                var dataManager = new DataManager();
+                dataManager.AddCar(viewModel);
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError(nameof(CreateCarViewModel.Brand), "Wrong dude! Try again!");
+                return View();
+            }
+            return RedirectToAction(nameof(CarsController.Index));
         }
     }
 }
