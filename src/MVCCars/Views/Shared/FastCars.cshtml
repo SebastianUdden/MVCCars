@@ -1,14 +1,13 @@
-﻿@if (Model.ShowAsHighlighted)
-{
-    <tr style="background-color:red;">
-        <td>@Model.Name</td>
-        <td>@Model.Email</td>
-    </tr>
-}
-else
+﻿@foreach (var car in Model)
 {
     <tr>
-        <td>@Model.Name</td>
-        <td>@Model.Email</td>
+        @if (car.ShowAsFast)
+        {
+            <th style="color: Highlight; font-style: italic">@car.Brand</th>
+        }
+        else
+        {
+            <th>@car.Brand</th>
+        }
     </tr>
 }
