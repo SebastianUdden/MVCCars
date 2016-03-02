@@ -16,5 +16,9 @@ namespace MVCCars.Controllers
             var model = dataManager.ListCars();
             return View(model);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }

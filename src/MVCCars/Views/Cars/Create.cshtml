@@ -1,0 +1,28 @@
+﻿@model CreateCarViewModel
+
+<h1>Create a Car</h1>
+<div asp-validation-summary="ValidationSummary.All"></div>
+
+<form asp-controller="Cars" asp-action="Create">
+    <label asp-for="Brand"></label>
+    <input asp-for="Brand" placeholder="Brand" />
+    <span asp-validation-for="Brand"></span>
+    <br />
+    <label asp-for="Doors"></label>
+    <input asp-for="Doors" placeholder="Doors" />
+    <span asp-validation-for="Doors"></span>
+    <br />
+    <label asp-for="Doors"></label>
+    <input asp-for="Doors" placeholder="Email" />
+    <span asp-validation-for="Doors"></span>
+    <br />
+    <label asp-for="TopSpeed"></label>
+    <input asp-for="TopSpeed" type="TopSpeed" />
+    <span asp-validation-for="TopSpeed" />
+    <br />
+    <label asp-for="AcceptTerms"></label>
+    <input asp-for="AcceptTerms" type="checkbox" />
+    <span asp-validation-for="AcceptTerms" />
+
+    <input type="submit" value="Create" />
+</form>
