@@ -28,10 +28,14 @@
     <br />
 
 
-    <input asp-for="AcceptTerms" data-val="false" type="checkbox" />
+    <input asp-for="AcceptTerms" type="checkbox" />
     <label asp-for="AcceptTerms"></label>
-    <span asp-validation-for="AcceptTerms"></span>
+    <span asp-validation-for="AcceptTerms" />
     <br /><br />
-    <input type="submit" value="Create" /> 
+    <input type="submit" value="Create" />
 </form>
 
+@section script{
+<script src="~/Script/jquery.validate.min.js"></script>
+<script src="~/Script/jquery.validate.unobtrusive.min.js"></script>
+}
