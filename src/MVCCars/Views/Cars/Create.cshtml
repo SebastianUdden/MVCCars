@@ -28,9 +28,10 @@
     <br />
 
 
-    <input asp-for="AcceptTerms" type="checkbox" />
+    <input asp-for="AcceptTerms" data-val="false" type="checkbox" />
     <label asp-for="AcceptTerms"></label>
-    <span asp-validation-for="AcceptTerms" />
+    <span asp-validation-for="AcceptTerms"></span>
     <br /><br />
-    <input type="submit" value="Create" />
+    <input type="submit" value="Create" /> 
 </form>
+
